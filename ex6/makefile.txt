@@ -1,0 +1,31 @@
+clean: 
+		-rm data*
+		
+data3:	createdata3.c
+	gcc -o data3 createdata3.c
+	data3 >| data3.txt
+	./hello < data3.txt
+	
+data6:	createdata6.c
+	gcc -o data6 createdata6.c
+	data6 >| data6.txt
+	./hello < data6.txt
+	
+data9:	createdata9.c
+	gcc -o data9 createdata9.c
+	data9 >| data9.txt
+	./hello < data9.txt
+
+
+	
+all:
+	gcc -o data3 createdata3.c
+	data3 >| data3.txt
+	./hello < data3.txt
+	gcc -o data6 createdata6.c
+	data6 >| data6.txt
+	./hello < data6.txt
+	gcc -o data9 createdata9.c
+	data9 >| data9.txt
+	./hello < data9.txt
+	
